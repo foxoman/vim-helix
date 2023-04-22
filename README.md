@@ -24,9 +24,9 @@ To install the colorscheme you can either:
 
 Add the following to your vimrc and run PlugInstall
 
-    Plug 'Nequo/vim-allomancer'
+    Plug 'foxoman/vim-helix'
 
-2. Manually clone/download the repo and move the file allomancer.vim to ".vim/colors/"
+2. Manually clone/download the repo and move the file helix.vim to ".vim/colors/"
 
 
 ## Using the colorscheme
@@ -34,7 +34,7 @@ Add the following to your vimrc and run PlugInstall
 Once installed add the following to your .vimrc
 
     set termguicolors "Remove this in urxvt
-    colo allomancer 
+    colo helix 
 
 ## The colorscheme isn't working?
 
@@ -67,39 +67,4 @@ This is still a work in progress and the colors I use aren't in the 256 xterm co
     *.color7:     #ABB2BF
     *.color15:    #ECEFF4
 
-It's also available in the repo as allomancer.Xresources.
-
-## Modifying the colorscheme
-
-Since this is the first iteration of the colorscheme, I don't have a vimrc cway of changing colors. However, it is quite easy to do so yourself. Here's some things you can do:
-
-1. Change a specific color. Do this by just changing the corresponding hex value at the start of the colorscheme file
-2. Change the highlighting of some token. Just find the corresponding token and change the associated function arguments (order is: fg,bg,formatting) Remember to check that you remove anything you are changing from the links dictionary if it is in there as the first argument as that will link the token to something else and the links are done last.
-
-3. Add highlighting for some token. This can be done by adding a line with the Highlight function and the Highlight group of what you're trying to highlight.
-
-A quick tip is to add the following to your .vimrc in order to check the highlight group of what your cursor is on when you press F10 (or remap it to some other key):
-
-    map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-    \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-    \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-    
-
-## Screenshots
-
-Here's some samples of what it looks like for me in gnome-terminal with the [Iosevka](https://github.com/be5invis/Iosevka) font:
-
-### Markdown
-![allomancer](/images/allomancer-md.png)
-
-### Python
-![allomancer](/images/allomancer-py.png)
-
-### Bash
-![allomancer](/images/allomancer-sh.png)
-
-### Arduino-C
-![allomancer](/images/allomancer-C.png)
-
-### Haskell using [this](https://github.com/sdiehl/haskell-vim-proto/blob/master/vim/syntax/haskell.vim) syntax file
-![allomancer](/images/allomancer-hs.png)
+It's also available in the repo as helix.Xresources.
