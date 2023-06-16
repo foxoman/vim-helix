@@ -26,15 +26,17 @@ else
 endif
 
 "Defining UI colors
-let s:black = {"cterm":"0", "gui": "#3b224c"}           "Background color 282c34
-let s:light_black = {"cterm":"0", "gui": "#2c323c"}
+let s:black = {"cterm":"0", "gui": "#242430"}           "Background color 330066 - 262626
+let s:light_black = {"cterm":"0", "gui": "#262633"} "" Highlight 333333
 let s:dark_grey = {"cterm":"8", "gui": "#3e4452"}
-let s:grey = {"cterm":"8", "gui": "#687c81"} " comment 55606d
-let s:light_grey = {"cterm": "7", "gui": "#a4a0e8"}         "Foreground color abb2bf
+let s:grey = {"cterm":"8", "gui": "#404040"} 
+let s:comm = {"cterm":"8", "gui": "#666666"} " comment 55606d   687c81 595959
+let s:light_grey = {"cterm": "7", "gui": "#607c81"}         "Foreground color abb2bf
 let s:white = {"cterm": "NONE", "gui": "#d6e9ff"}
 
 
 "Defining highlighting colors
+
 
 let s:light_red = {"cterm": "1", "gui": "#e06c75"}
 let s:dark_red = {"cterm": "9", "gui": "#af5f5f"}
@@ -130,7 +132,7 @@ call Highlight("IncSearch", s:black, s:dark_red, s:bold_underline)
 call Highlight("Search", s:black, s:aqua, s:bold_underline)
 
 
-call Highlight("Comment", s:grey, s:none, s:none)
+call Highlight("Comment", s:comm, s:none, s:none)
 call Highlight("Constant", s:orange, s:black, s:none)
 call Highlight("Identifier", s:blue, s:black, s:none)
 call Highlight("Function", s:beige, s:black, s:none)
