@@ -16,4 +16,4 @@ Add the following to your vimrc and run PlugInstall
 
 Once installed add the following to your vim or nvim config:
 
-`colorscheme allomancer`
+`colorscheme helix`
