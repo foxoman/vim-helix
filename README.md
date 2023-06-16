@@ -1,4 +1,4 @@
-
+** Based on [Allomancer](https://github.com/Nequo/vim-allomancer)
 ## Installation
 
 To install the colorscheme you can either:
