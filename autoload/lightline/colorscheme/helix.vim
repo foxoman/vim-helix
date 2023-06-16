@@ -15,7 +15,7 @@ let s:gui0C = "#87afd7"
 let s:gui0D = "#8787af"
 let s:gui0E = "#5fafaf"
 let s:gui0F = "#ffffff"
-let s:guiBG = "#262626"
+let s:guiBG = "#1d1d25"
 let s:guiFG = "#bcbcbc"
 
 let s:cterm00 = "234"
