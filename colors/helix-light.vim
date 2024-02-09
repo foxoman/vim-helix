@@ -11,7 +11,7 @@ endif
 
 set background=light
 
-let colors_name = 'helix'
+let colors_name = 'helix-light'
 
 if ($TERM =~ '256' || &t_Co >= 256) || has('gui_running')
   hi Normal           ctermbg=231  ctermfg=234  guibg=#ffffff guifg=#1c1c1c cterm=NONE           gui=NONE
