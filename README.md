@@ -21,3 +21,5 @@ Once installed add the following to your vim or nvim config:
 ## Screenshot 
 ![image](https://github.com/foxoman/vim-helix/assets/5356677/f11fbff4-53cd-4afb-aa46-080ebfd7e084)
 
+![Boo_Berry](https://raw.githubusercontent.com/foxoman/vim-helix/main/image.png)
+
