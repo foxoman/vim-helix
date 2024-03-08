@@ -102,7 +102,8 @@ call s:HL('Special', s:violet, '', '')       " Special tokens, which might inclu
 call s:HL('SpecialComment', s:berry_desaturated, '', '') " Special comments (doc comments in Nim)
 call s:HL('Tag', s:gold, '', '')             " Tags, could be useful for specific Nim syntax
 
-
+call s:HL('Visual', 'NONE', s:berry_fade, '')
+call s:HL('CursorLine', 'NONE', s:berry_dim, '')
 
 " Ensure background color is set correctly for transparent backgrounds
 set background=dark
