@@ -120,82 +120,51 @@ set background=dark
 let g:colors_name = "helix-boo"
 
 
+" Tree Sitter Support
+
+" Define the helix-boo color palette
+hi! berry guifg=#3A2A4D
+hi! berry_fade guifg=#5A3D6E
+hi! berry_dim guifg=#47345E
+hi! berry_saturated guifg=#2B1C3D
+hi! berry_desaturated guifg=#886C9C
+hi! bubblegum guifg=#D678B5
+hi! gold guifg=#E3C0A8
+hi! lilac guifg=#C7B8E0
+hi! mint guifg=#7FC9AB
+hi! violet guifg=#C78DFC
+
+" Link Tree-sitter syntax groups to the helix-boo colors
+hi! link TSComment berry_desaturated
+hi! link TSConstant gold
+hi! link TSConstBuiltin violet
+hi! link TSConstMacro lilac
+hi! link TSConstructor mint
+hi! link TSError bubblegum
+hi! link TSException bubblegum
+hi! link TSField lilac
+hi! link TSFunction violet
+hi! link TSFuncBuiltin mint
+hi! link TSFuncMacro bubblegum
+hi! link TSInclude berry_desaturated
+hi! link TSKeyword bubblegum
+hi! link TSLabel gold
+hi! link TSMethod violet
+hi! link TSNamespace berry_desaturated
+hi! link TSOperator berry_fade
+hi! link TSParameter lilac
+hi! link TSProperty gold
+hi! link TSPunctDelimiter berry_desaturated
+hi! link TSPunctBracket berry_dim
+hi! link TSPunctSpecial mint
+hi! link TSTag bubblegum
+hi! link TSText lilac
+hi! link TSType violet
+hi! link TSVariable berry_saturated
+hi! link TSVariableBuiltin mint
 
 
-
-lua << EOF
-local colors = {
-  berry = "#3A2A4D",
-  berry_fade = "#5A3D6E",
-  berry_dim = "#47345E",
-  berry_saturated = "#2B1C3D",
-  berry_desaturated = "#886C9C",
-  bubblegum = "#D678B5",
-  gold = "#E3C0A8",
-  lilac = "#C7B8E0",
-  mint = "#7FC9AB",
-  violet = "#C78DFC",
-}
-
--- Function to set Tree-sitter highlights
-local function set_ts_highlight(group, properties)
-  vim.api.nvim_set_hl(0, group, properties)
-end
-
--- Define Tree-sitter highlights
-local ts_highlights = {
-  { "TSComment", { fg = colors.berry_desaturated } },
-  { "TSAnnotation", { fg = colors.mint } },
-  { "TSAttribute", { fg = colors.violet } },
-  { "TSConstructor", { fg = colors.violet } },
-  { "TSConstant", { fg = colors.gold } },
-  { "TSConstBuiltin", { fg = colors.gold } },
-  { "TSConstMacro", { fg = colors.gold } },
-  { "TSError", { fg = colors.bubblegum } },
-  { "TSException", { fg = colors.bubblegum } },
-  { "TSField", { fg = colors.lilac } },
-  { "TSFloat", { fg = colors.gold } },
-  { "TSFunction", { fg = colors.mint } },
-  { "TSFuncBuiltin", { fg = colors.mint } },
-  { "TSFuncMacro", { fg = colors.mint } },
-  { "TSInclude", { fg = colors.violet } },
-  { "TSKeyword", { fg = colors.bubblegum } },
-  { "TSKeywordFunction", { fg = colors.bubblegum } },
-  { "TSLabel", { fg = colors.lilac } },
-  { "TSMethod", { fg = colors.mint } },
-  { "TSNamespace", { fg = colors.lilac } },
-  { "TSNumber", { fg = colors.gold } },
-  { "TSOperator", { fg = colors.bubblegum } },
-  { "TSParameter", { fg = colors.lilac } },
-  { "TSParameterReference", { fg = colors.lilac } },
-  { "TSProperty", { fg = colors.lilac } },
-  { "TSPunctDelimiter", { fg = colors.lilac } },
-  { "TSPunctBracket", { fg = colors.lilac } },
-  { "TSPunctSpecial", { fg = colors.lilac } },
-  { "TSRepeat", { fg = colors.bubblegum } },
-  { "TSString", { fg = colors.gold } },
-  { "TSStringRegex", { fg = colors.gold } },
-  { "TSStringEscape", { fg = colors.violet } },
-  { "TSSymbol", { fg = colors.lilac } },
-  { "TSType", { fg = colors.violet } },
-  { "TSTypeBuiltin", { fg = colors.violet } },
-  { "TSVariable", { fg = colors.lilac } },
-  { "TSVariableBuiltin", { fg = colors.violet } },
-  { "TSTag", { fg = colors.gold } },
-  { "TSTagDelimiter", { fg = colors.lilac } },
-  { "TSText", { fg = colors.lilac } },
-  { "TSStrong", { fg = colors.lilac, bold = true } },
-  { "TSEmphasis", { fg = colors.lilac, italic = true } },
-  { "TSUnderline", { fg = colors.lilac, underline = true } },
-  { "TSStrike", { fg = colors.lilac, strikethrough = true } },
-  { "TSTitle", { fg = colors.gold, bold = true } },
-  { "TSLiteral", { fg = colors.gold } },
-  { "TSURI", { fg = colors.violet, underline = true } },
-  -- Add any language-specific groups here
-}
-
--- Apply Tree-sitter highlights
-for _, hl in ipairs(ts_highlights) do
-  set_ts_highlight(hl[1], hl[2])
-end
-EOF
+" Using Lua in Vimscript to set Tree-sitter highlights
+hi! MacroHighlight guifg=#00FF00
+" Assuming 'function.macro' is a Tree-sitter highlight group for macros
+hi! link TSFunctionMacro MacroHighlight
