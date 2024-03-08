@@ -42,7 +42,6 @@ call s:HL('Normal', s:lilac, s:berry_dim, '')
 call s:HL('NonText', s:berry_dim, s:berry_dim, '')
 call s:HL('ColorColumn', 'NONE', s:berry_fade, '')
 
-
 " Syntax Highlighting
 call s:HL('Comment', s:berry_desaturated, '', '')
 call s:HL('Constant', s:gold, '', '')
@@ -102,8 +101,17 @@ call s:HL('Special', s:violet, '', '')       " Special tokens, which might inclu
 call s:HL('SpecialComment', s:berry_desaturated, '', '') " Special comments (doc comments in Nim)
 call s:HL('Tag', s:gold, '', '')             " Tags, could be useful for specific Nim syntax
 
+" Fixing Selection Highlight
+
 call s:HL('Visual', 'NONE', s:berry_fade, '')
 call s:HL('CursorLine', 'NONE', s:berry_dim, '')
+
+" Highlight matching parentheses
+call s:HL('MatchParen', s:mint, 'NONE', 'bold')
+
+" Adjusting SignColumn to match the theme's background
+call s:HL('SignColumn', 'NONE', s:berry_dim, '')
+
 
 " Ensure background color is set correctly for transparent backgrounds
 set background=dark
