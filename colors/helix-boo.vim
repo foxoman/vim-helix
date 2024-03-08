@@ -38,7 +38,7 @@ function! s:HL(group, fg, bg, gui)
   execute l:cmd
 endfunction
 
-call s:HL('Normal', s:lilac, s:berry_dim, '')
+call s:HL('Normal', s:lilac, s:berry, '')
 call s:HL('NonText', s:berry_dim, s:berry_dim, '')
 call s:HL('ColorColumn', 'NONE', s:berry_fade, '')
 
@@ -110,7 +110,7 @@ call s:HL('CursorLine', 'NONE', s:berry_dim, '')
 call s:HL('MatchParen', s:mint, 'NONE', 'bold')
 
 " Adjusting SignColumn to match the theme's background
-call s:HL('SignColumn', 'NONE', s:berry_dim, '')
+call s:HL('SignColumn', 'NONE', s:berry, '')
 
 
 " Ensure background color is set correctly for transparent backgrounds
