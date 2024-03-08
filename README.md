@@ -17,11 +17,17 @@ Add the following to your vimrc and run PlugInstall
 Once installed add the following to your vim or nvim config:
 
 `colorscheme helix`
+
 `colorscheme helix-dark`
+
 `colorscheme helix-light`
+
 `colorscheme helix-boo`
 
+For Airline support:
+
 `let g:airline_theme='helix'`
+
 `let g:airline_theme='helix_boo'`
 
 ## Screenshot 
