@@ -17,6 +17,12 @@ Add the following to your vimrc and run PlugInstall
 Once installed add the following to your vim or nvim config:
 
 `colorscheme helix`
+`colorscheme helix-dark`
+`colorscheme helix-light`
+`colorscheme helix-boo`
+
+`let g:airline_theme='helix'`
+`let g:airline_theme='helix_boo'`
 
 ## Screenshot 
 ![image](https://github.com/foxoman/vim-helix/assets/5356677/f11fbff4-53cd-4afb-aa46-080ebfd7e084)
