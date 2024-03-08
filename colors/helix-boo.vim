@@ -1,3 +1,6 @@
+hi clear "Reset all highlighting to the defaults.  Removes all highlighting for groups added by the user
+
+
 " helix-boo.vim - a Vim/Neovim color scheme
 if exists("syntax_on")
   syntax reset
@@ -39,7 +42,7 @@ function! s:HL(group, fg, bg, gui)
 endfunction
 
 call s:HL('Normal', s:lilac, s:berry, '')
-call s:HL('NonText', s:berry_dim, s:berry_dim, '')
+call s:HL('NonText', s:berry_dim, s:berry, '')
 call s:HL('ColorColumn', 'NONE', s:berry_fade, '')
 
 " Syntax Highlighting
