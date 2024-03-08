@@ -39,6 +39,8 @@ function! s:HL(group, fg, bg, gui)
 endfunction
 
 call s:HL('Normal', s:lilac, s:berry_dim, '')
+call s:HL('NonText', s:berry_dim, s:berry_dim, '')
+call s:HL('ColorColumn', 'NONE', s:berry_fade, '')
 
 
 " Syntax Highlighting
