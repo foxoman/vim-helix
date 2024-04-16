@@ -28,6 +28,8 @@ For Airline support:
 
 `let g:airline_theme='helix'`
 
+`let g:airline_theme='helix-light'`
+
 `let g:airline_theme='helix_boo'`
 
 ## Screenshot 
