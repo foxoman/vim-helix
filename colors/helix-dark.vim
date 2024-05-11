@@ -26,7 +26,7 @@ else
 endif
 
 "Defining UI colors
-let s:black = {"cterm":"0", "gui": "#0C0C0C"}           "242430 Background color 330066 - 262626
+let s:black = {"cterm":"0", "gui": "#171421"} 
 let s:light_black = {"cterm":"0", "gui": "#262633"} "" Highlight 333333
 let s:dark_grey = {"cterm":"8", "gui": "#3e4452"}
 let s:grey = {"cterm":"8", "gui": "#404040"}
